@@ -2034,6 +2034,12 @@ html, body {
   bottom: 0px;
   width: 100%; }
 
+#money {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}
+
 /* Footer */
 #footer {
   padding: 4em 0 2em 0;
