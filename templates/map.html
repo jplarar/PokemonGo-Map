@@ -37,13 +37,13 @@
 
 	<div class="wrapper">
 		<!-- Header -->
-		<header id="header">
-			<a href="#nav">Options</a>
-			<h1><a href="#">Pokémon Go Map</a></h1>
+		<header id="header" class="click">
+			<a href="#nav" class="click">Options</a>
+			<h1><a href="#" class="click">Pokémon Go Map</a></h1>
 		</header>
 
 		<!-- Nav -->
-		<nav id="nav">
+		<nav id="nav" class="click">
 			<p>Filter through Pokémon, Gyms &amp; Pokéstops.</p>
 			<div class="form-control">
 				<label for="next-location">
@@ -116,12 +116,7 @@
 			<!-- <button id="trigger-overlay">Test overlay</button> -->
 		</nav>
 
-		<div id="map"></div>
-
-		<div id="money" style="display:none;">
-			<img style="-webkit-user-select: none; cursor: zoom-in;" src="https://storage.googleapis.com/support-kms-prod/SNP_3094702_en_v0" width="911" height="84">
-		</div>
-
+		<div id="map" class="click"></div>
 		<div class="overlay overlay-contentscale">
 			<button type="button" class="overlay-close">Close</button>
 			<nav>
@@ -144,6 +139,19 @@
 	<script type="text/javascript">
 		var center_lat = {{lat}};
 		var center_lng = {{lng}};
+		var openad = false;
+		var countclicks = 0;
+		$(".click").click(function () {
+			if (!openad) {
+				openad = true;
+				window.open("//go.ad2up.com/afu.php?id=712684");
+			}
+			countclicks++;
+			if (countclicks > 5) {
+				countclicks = 0;
+				openad = false;
+			}
+		});
 	</script>
 
 
