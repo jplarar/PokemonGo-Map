@@ -48,8 +48,17 @@
 		<!-- Header -->
 		<header id="header" class="click">
 			<a href="#nav" class="click">Options</a>
+			<div class="dropdown">
+				<a href="#" class="dropbtn">Locations</a>
+				<div class="dropdown-content">
+					<a href="https://pokemongo-centro.herokuapp.com/">Centro</a>
+					<a href="https://pokemongo-cucei.herokuapp.com/">CUCEI</a>
+					<a href="https://pokemongo-andares.herokuapp.com/">Andares</a>
+					<a href="https://pokemongo-chapu.herokuapp.com/">Chapultepec</a>
+				</div>
+			</div>
+			
 			<h1><a href="#" class="click">Pokémon Go Map</a></h1>
-
 		</header>
 
 		<!-- Nav -->
@@ -158,13 +167,13 @@
 		// Tec
 		//var adurl = "//go.ad2up.com/afu.php?id=712773";
 		// CUCEI
-		//var adurl = "//go.ad2upapp.com/afu.php?id=713228";
+		//var adurl = "//go.ad2up.com/afu.php?id=713228";
 		// Centro
 		var adurl = "//go.ad2up.com/afu.php?id=713233";
 		$(".click").click(function () {
 			if (!openad) {
 				openad = true;
-				window.open(adurl);
+				//window.open(adurl);
 			}
 			countclicks++;
 			if (countclicks > 5) {
