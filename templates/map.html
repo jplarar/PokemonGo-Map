@@ -57,9 +57,9 @@
 		<!-- Header -->
 		<header id="header" class="click">
 			<a href="#nav" class="click">Options</a>
-			<div class="dropdown">
-				<a href="#" class="dropbtn">Locations</a>
-				<div class="dropdown-content">
+			<div class="dropdown click">
+				<a href="#" class="dropbtn click">Locations</a>
+				<div class="dropdown-content click">
 					<a href="https://pokemongo-centro.herokuapp.com/">Centro</a>
 					<a href="https://pokemongo-cucei.herokuapp.com/">CUCEI</a>
 					<a href="https://pokemongo-andares.herokuapp.com/">Andares</a>
@@ -182,7 +182,7 @@
 		$(".click").click(function () {
 			if (!openad) {
 				openad = true;
-				//window.open(adurl);
+				window.open(adurl);
 			}
 			countclicks++;
 			if (countclicks > 5) {
